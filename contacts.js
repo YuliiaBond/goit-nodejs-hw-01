@@ -35,10 +35,10 @@ async function getContactById(contactId) {
         return true;
 };
 
-async function addContact(name, email, phone) {
+async function addContact(data) {
     const contacts = await listContacts();
     const newId = contacts.length + 1;
-    const newContact = { id: newId, name, email, phone };
+    const newContact = { id: newId, ...data };
     console.log(newContact);
     contacts.push(newContact);
     await updateContacts(contacts);

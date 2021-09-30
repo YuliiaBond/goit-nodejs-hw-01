@@ -1,3 +1,12 @@
+.vscode/
+.idea/
+package-lock.json
+yarn.lock
+yarn.error
+.env
+node_modules/
+
+
 # Logs
 logs
 *.log
